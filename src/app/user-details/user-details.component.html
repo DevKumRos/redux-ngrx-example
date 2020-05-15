@@ -1,0 +1,28 @@
+
+<a href="javascript:void(0);" class="btn btn-primary btn-lg mt-3" (click)="navigateToUserOverview()">Back</a>
+<div class="container">
+    
+    <h1 class="text-center p-3"> User Details Page</h1>
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    	 <div class="well profile">
+            <div class="col-lg-12">
+                <div class="col-lg-12 col-lg-8">
+                    <h2 class="text-info">Basic User Information</h2>
+                    <p class="ml-5"><strong>UserName: </strong> {{ (user$ | async)?.username }} </p>
+                    <p class="ml-5"><strong>Email: </strong> {{ (user$ | async)?.email }} </p>
+                    <p class="ml-5"><strong>Phone: </strong> {{ (user$ | async)?.phone }} </p>
+                    <p class="ml-5"><strong>Website: </strong> {{ (user$ | async)?.website }} </p>
+                    <h4 class ="text-info ">Address</h4>
+                     <p class="ml-5"><strong>Street: </strong> {{ (address$ | async)?.street }} </p>
+                     <p class="ml-5"><strong>City: </strong> {{ (address$ | async)?.city }} </p>
+                     <p class="ml-5"><strong>Zipcode: </strong> {{ (address$ | async)?.zipcode }} </p>
+                     <h4 class ="text-info">Company Details</h4>
+                     <p class="ml-5"><strong>Street: </strong> {{ (user$ | async)?.company.name }} </p>
+                     <p class="ml-5"><strong>City: </strong> {{ (user$ | async)?.company.catchPhrase }} </p>
+                </div>
+            </div>
+    	 </div>
+	    </div>  
+    </div>
+</div>      
